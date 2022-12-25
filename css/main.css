@@ -89,11 +89,11 @@ body {
   }
 }
 
-.section-feature {
+.section-feature .section {
   padding: 60px 0px;
 }
 @media screen and (min-width: 1200px) {
-  .section-feature {
+  .section-feature .section {
     padding: 94px 0px;
   }
 }
@@ -546,6 +546,11 @@ body {
   /* Футер иконки */
   /*Призыв к действию (подписка на телеграм) */
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 0 60px 0;
+  }
+}
 .footer__socials {
   color: rgba(255, 255, 255, 0.6);
   background: var(--footer-backgraund);
@@ -575,15 +580,41 @@ body {
   color: var(--accent-color);
 }
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    text-align: justify;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .footer__box {
   display: inline-block;
 }
+@media screen and (min-width: 768px) {
+  .footer__box {
+    margin-bottom: 60px;
+  }
+}
 .footer__social {
-  display: inline-block;
-  margin-left: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    display: inline-block;
+    margin-left: 70px;
+  }
 }
 .footer__text {
   font-family: "Roboto";
@@ -597,6 +628,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 60px;
 }
 .footer__soc-list {
   display: flex;
@@ -636,6 +668,11 @@ body {
   margin-right: 0;
   margin-left: auto;
 }
+@media screen and (min-width: 768px) {
+  .footer__info {
+    display: contents;
+  }
+}
 .footer__form-text {
   font-weight: 700;
   font-size: 14px;
@@ -665,6 +702,17 @@ body {
   transition: color 250ms;
   margin-left: 12px;
 }
+@media screen and (min-width: 768px) {
+  .footer__form-button {
+    display: block;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__form-button {
+    display: inline-flex;
+  }
+}
 .footer__form-button:hover, .footer__form-button:focus {
   background: var(--hover-focus-color);
 }
@@ -672,7 +720,7 @@ body {
   margin-left: 10px;
 }
 .footer__form-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   color: #ffffff;
   background-color: rgb(47, 48, 58);
@@ -683,6 +731,17 @@ body {
   padding-bottom: 15px;
   padding-left: 16px;
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .footer__form-input {
+    width: 358px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__form-input {
+    width: 358px;
+  }
 }
 
 .button-items {
@@ -1063,7 +1122,7 @@ label.modal__checkbox-text {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  display: flex;
+  display: block;
   align-items: center;
   margin-bottom: 20px;
 }

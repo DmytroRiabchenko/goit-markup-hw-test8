@@ -2,6 +2,9 @@
   background: var(--footer-backgraund);
 
   padding: 60px 0;
+  @media screen and (min-width: 768px) {
+    padding: 0 0 60px 0;
+  }
   &__socials {
     color: rgba(255, 255, 255, 0.6);
     background: var(--footer-backgraund);
@@ -32,7 +35,6 @@
     line-height: 1.71;
     text-decoration: none;
 
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -45,17 +47,36 @@
   /* Футер иконки */
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      text-align: justify;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+      align-content: stretch;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    text-align: center;
   }
 
   &__box {
     display: inline-block;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__social {
-    display: inline-block;
-    margin-left: 70px;
+    @media screen and (min-width: 1200px) {
+      display: inline-block;
+      margin-left: 70px;
+    }
+
+    margin-bottom: 60px;
   }
 
   &__text {
@@ -73,6 +94,8 @@
     align-items: center;
 
     margin-bottom: 20px;
+
+    margin-top: 60px;
   }
 
   &__soc-list {
@@ -123,6 +146,9 @@
   &__info {
     margin-right: 0;
     margin-left: auto;
+    @media screen and (min-width: 768px) {
+      display: contents;
+    }
   }
 
   &__form-text {
@@ -140,6 +166,13 @@
   }
 
   &__form-button {
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
+    }
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +205,13 @@
   }
 
   &__form-input {
-    width: 358px;
+    @media screen and (min-width: 480px) {
+      width: 358px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 358px;
+    }
+    width: 450px;
     height: 50px;
     color: #ffffff;
     background-color: rgba(47, 48, 58, 1);
@@ -184,5 +223,6 @@
     padding-left: 16px;
 
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
